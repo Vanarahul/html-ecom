@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdown Navbar</title>
+ <link rel="stylesheet" href="styles.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Sevillana&display=swap" rel="stylesheet">
+</head>
+<body>
+<section class="nav">
+  <div id="navbar">
+    <div class="logo">
+      <img src="./logo.png" class="brand" alt="brand logo">
+      <h2 class="offer">@ Low Price</h2>
+    </div>
+    <div class="left">
+  <nav class="navbar">
+    <ul>
+      <li>
+        <a href="#">Home &#9660;</a>
+        <div class="dropdown-content">
+          <a href="#">Trending</a>
+          <a href="#">Footer</a>
+        </div>
+      </li>
+      <li>
+        <a href="#">Men</a>
+        </li>
+      <li>
+        <a href="#">Women</a></li>
+      <li>
+        <a href="#">Page &#9660;</a> <!-- Down arrow -->
+        <div class="dropdown-content">
+          <a href="#">About Us</a>
+          <a href="#">Shop</a>
+          <a href="#">Blog</a>
+          <a href="#">Single Product</a>
+          <a href="#">Single Post</a>
+          <a href="#">Styles</a>
+          <a href="#">Cart</a>
+          <a href="#">Login</a>
+        </div>
+      </li>
+      <li>
+        <a href="#">Shop</a>
+      </li>
+      <li>
+        <a href="#">Sale</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<div class="icon-container">
+  <a id="profile-icon" onclick="openModal()"><i class="fas fa-user"></i></a> <!-- User icon -->
+  <div class="cart" ><i class="fas fa-shopping-cart cart-icon"></i></div> <!-- Shopping cart icon -->
+  <div class="search"><i class="fas fa-search" id="search-toggle"></i> </div><!-- Search icon -->
+</div>
+
+</div>
+<div class="offer-container">
+  <div class="offer-text">
+    🔥 Special Offer: Get an amazing 50% off on all products, plus an extra 10% discount on purchases above ₹2500! Enjoy free shipping on orders over ₹1000 and exclusive rewards for first-time shoppers. Hurry, this deal won’t last long—grab it before it’s gone! Limited time only! 🛍️
+  </div>
+</div>
+
+<!-- Search Bar (Initially Hidden) -->
+<div id="search-bar" class="search-bar">
+  <input type="text" placeholder="Search..." />
+  <i id="close-search" class="fas fa-times"></i>
+</div>
+</section>
+<section class="slider">
+  <div class="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item"><img src="./photo1.png" alt="Image 1"></div>
+        <div class="carousel-item"><img src="./photo2.png" alt="Image 2"></div>
+        <div class="carousel-item"><img src="./photo3.png" alt="Image 3"></div>
+    </div>
+    <div class="controls">
+        <button class="control-btn" id="prev">&#8592;</button>
+        <button class="control-btn" id="next">&#8594;</button>
+    </div>
+</div>
+</section>
+<div class="discount-banner">
+  <div class="content">
+      <h1>Extra 10% OFF Discount Coupons</h1>
+      <p>Subscribe us to get 10% OFF on all the purchases</p>
+  </div>
+  <a class="email-btn" href="vanarahul22@gmail.com">EMAIL ME</a>
+  <div class="background-text">10% OFF</div>
+</div>
+<section class="productcart">
+  <div class="title-shoes"><h2>Trending shoes👟</h2></div>
+  <div class="products">
+    <div class="product">
+        <h3>Product 1</h3>
+        <img src="./p1.jpg" class="pimg" alt="shoes">
+        <p>Price: $10</p>
+        <button class="add-to-cart" data-name="Product 1" data-img="./p1.jpg" data-price="10">Add to Cart</button>
+        <button class="buy-now" data-name="Product 1" data-price="10">Buy Now</button>
+    </div>
+    <div class="product">
+        <h3>Product 2</h3>
+        <img src="./p2.jpeg" class="pimg" alt="shoes">
+        <p>Price: $20</p>
+        <button class="add-to-cart" data-name="Product 2" data-img="./p2.jpeg" data-price="20">Add to Cart</button>
+        <button class="buy-now" data-name="Product 2" data-price="20">Buy Now</button>
+    </div>
+    <div class="product">
+        <h3>Product 3</h3>
+        <img src="./p3.jpg" class="pimg" alt="shoes">
+        <p>Price: $10</p>
+        <button class="add-to-cart" data-name="Product 3" data-img="./p3.jpg" data-price="10">Add to Cart</button>
+        <button class="buy-now" data-name="Product 3" data-price="10">Buy Now</button>
+    </div>
+    <div class="product">
+        <h3>Product 4</h3>
+        <img src="./p4.jpg" class="pimg" alt="shoes">
+        <p>Price: $10</p>
+        <button class="add-to-cart" data-name="Product 4" data-img="./p4.jpg" data-price="10">Add to Cart</button>
+        <button class="buy-now" data-name="Product 4" data-price="10">Buy Now</button>
+    </div>
+    <div class="product hidden">
+        <h3>Product 5</h3>
+        <img src="./p5.jpg" class="pimg" alt="shoes">
+        <p>Price: $10</p>
+        <button class="add-to-cart" data-name="Product 5" data-img="./p5.jpg" data-price="10">Add to Cart</button>
+        <button class="buy-now" data-name="Product 5" data-price="10">Buy Now</button>
+    </div>
+    <div class="product hidden">
+        <h3>Product 6</h3>
+        <img src="./p6.jpg" class="pimg" alt="shoes">
+        <p>Price: $10</p>
+        <button class="add-to-cart" data-name="Product 6" data-img="./p6.jpg" data-price="10">Add to Cart</button>
+        <button class="buy-now" data-name="Product 6" data-price="10">Buy Now</button>
+    </div>
+    <div class="product hidden">
+        <h3>Product 7</h3>
+        <img src="./p7.jpg" class="pimg" alt="shoes">
+        <p>Price: $10</p>
+        <button class="add-to-cart" data-name="Product 7" data-img="./p7.jpg" data-price="10">Add to Cart</button>
+        <button class="buy-now" data-name="Product 7" data-price="10">Buy Now</button>
+    </div>
+    <div class="product hidden">
+        <h3>Product 8</h3>
+        <img src="./p8.jpg" class="pimg" alt="shoes">
+        <p>Price: $10</p>
+        <button class="add-to-cart" data-name="Product 8" data-img="./p8.jpg" data-price="10">Add to Cart</button>
+        <button class="buy-now" data-name="Product 8" data-price="10">Buy Now</button>
+    </div>
+    <div class="product hidden">
+        <h3>Product 9</h3>
+        <img src="./p9.jpg" class="pimg" alt="shoes">
+        <p>Price: $10</p>
+        <button class="add-to-cart" data-name="Product 9" data-img="./p9.jpg" data-price="10">Add to Cart</button>
+        <button class="buy-now" data-name="Product 9" data-price="10">Buy Now</button>
+    </div>
+    <div class="product hidden">
+        <h3>Product 10</h3>
+        <img src="./p10.jpg" class="pimg" alt="shoes">
+        <p>Price: $10</p>
+        <button class="add-to-cart" data-name="Product 10" data-img="./p10.jpg" data-price="10">Add to Cart</button>
+        <button class="buy-now" data-name="Product 10" data-price="10">Buy Now</button>
+    </div>
+    <div class="product hidden">
+        <h3>Product 11</h3>
+        <img src="./p11.jpg" class="pimg" alt="shoes">
+        <p>Price: $10</p>
+        <button class="add-to-cart" data-name="Product 11" data-img="./p11.jpg" data-price="10">Add to Cart</button>
+        <button class="buy-now" data-name="Product 11" data-price="10">Buy Now</button>
+    </div>
+    <div class="product hidden">
+        <h3>Product 12</h3>
+        <img src="./p12.jpg" class="pimg" alt="shoes">
+        <p>Price: $10</p>
+        <button class="add-to-cart" data-name="Product 12" data-img="./p12.jpg" data-price="10">Add to Cart</button>
+        <button class="buy-now" data-name="Product 12" data-price="10">Buy Now</button>
+    </div>
+</div>
+<div style="text-align: center; margin: 20px;">
+  <button id="view-more">View More</button>
+</div>
+
+<div class="cart-container" id="cart">
+    <div class="cart-header">
+        <span>Your Cart</span>
+        <button class="close-btn" id="close-cart">X</button>
+        <div class="confirmation-message" id="confirmation-message">
+            Thank you for your order! Your order has been placed.
+        </div>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-footer">
+        <div class="total-price" id="total-price">Total: $0</div>
+        <button class="place-order-btn" id="place-order">Place Order</button>
+    </div>
+</div>
+
+</section>
+<section class="footermain">
+  <footer class="footer">
+    <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Reviews</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h3>Get Help</h3>
+        <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Order Status</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h3>Online Shop</h3>
+        <ul>
+            <li><a href="#">Shoes</a></li>
+            <li><a href="#">Sports Shoes</a></li>
+            <li><a href="#">Casual Shoes</a></li>
+            <li><a href="#">Sneakers</a></li>
+        </ul>
+    </div>
+    <div class="footer-section follow-us">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</footer>
+
+</section>
+
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2>Login</h2>
+    <form>
+      <label for="username">Username or Email Address *</label>
+      <input type="text" id="username" name="username" required>
+      
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+      
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <label>
+          <input type="checkbox" name="remember"> Remember me
+        </label>
+        <a href="#">Forgot your password?</a>
+      </div>
+
+      <button type="submit" class="login-btn">Login</button>
+      <button type="button" onclick="openModal2()" class="register-btn">Register</button>
+    </form>
+  </div>
+</div>
+<div id="RegisterModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal2()">&times;</span>
+    <h2>Register</h2>
+    <form>
+      <label for="username">Username or Email Address *</label>
+      <input type="text" id="username" name="username" required>
+      
+      <label for="password"> Create Password</label>
+      <input type="password" id="password" name="password" required>
+      <label for="password"> New Password</label>
+      <input type="password" id="password" name="password" required>
+      <button type="button" class="register-btn">Create account</button>
+    </form>
+  </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
